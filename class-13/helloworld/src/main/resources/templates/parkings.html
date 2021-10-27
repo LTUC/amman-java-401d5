@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h4>List of parking locations</h4>
+
+    <form method="post" action="/parkings">
+        <input type="text" name="parkingName">
+        <input type="text" name="parkingLocation">
+        <input type="number" name="capacity">
+        <input type="submit">
+    </form>
+
+    <ul>
+        <li th:each="parking: ${allParkings}">Parking Name: <span th:text="${parking.parkingName}"></span>. Parking location: <span th:text="${parking.parkingLocation}"></span>. Parking Capacity: <span th:text="${parking.capacity}"></span></li>
+    </ul>
+
+</body>
+</html>
