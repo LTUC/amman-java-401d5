@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h4>User ame: <span th:text=${username}></span></h4>
+    <h4>User role: <span th:text=${userRole}></span></h4>
+
+    <!-- shown only if the user who is viewing the page is the logged in user -->
+    <form action="" method="put">
+    </form>
+
+    <a sec:authorize="hasRole('ROLE_ADMIN')">
+    <!--delete option, should only show to the admins-->
+
+
+</body>
+</html>
